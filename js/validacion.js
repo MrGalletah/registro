@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const contrasena2 = document.getElementById('password2').value;
         const terminos = document.getElementById('terminos').checked;
         
-        if (nombre === '' || apellido === '' || email === '' || constrasena1 === '' || contrasena2 === '' || !terminos && (constrasena1 !== contrasena2) || constrasena1.length < 6) {
+        if (nombre === '' || apellido === '' || email === '' || constrasena1 === '' || contrasena2 === '' || !terminos || constrasena1 !== contrasena2 || constrasena1.length < 6 || contrasena2 < 6) {
             evento.preventDefault();
             showAlertError();
         }else{
